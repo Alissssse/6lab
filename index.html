@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <header >
+      <nav class="navbar headr bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary navbar-li" data-bs-theme="dark">
+          <div class="container-fluid" style="background-color:rgb(43,48,53) ;" >
+          <a class="navbar-brand" href="#">Cat-shop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#pr">Продукция</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#otz">Отзывы</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#kontact">Контакты</a>
+              </li>
+            </ul>  
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                      <li><a class="dropdown-item" href="#">Вход в аккаунт</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modal-card"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <div class="modal fade" id="modal-card" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header bg-secondary">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: aliceblue;">Корзина</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Товар 1</td>
+                                        <td>500P</td>
+                                        <td>1 шт</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Товар 2</td>
+                                        <td>1500P</td>
+                                        <td>Закончился</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td>Товар 3</td>
+                                        <td>750P</td>
+                                        <td>2 шт</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                              <button type="button" class="btn btn-primary">Оплатить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  </li>
+              </ul> 
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Карусель-
+  <main>
+    <div class="container-fluid my-carousel" id = 'pr'>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="pc1.jpg"  class="d-block w-100" alt="шляпа">
+              </div>
+              <div class="carousel-item">
+                <img src="pc2.jpg" class="d-block w-100" alt="домик">
+              </div>
+              <div class="carousel-item">
+                <img src="pc3.jpg" class="d-block w-100" alt="еда">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    Отзыв-->
+    </div>
+    <section class="main-content">
+        <div class="container" id="otz">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div>
+                        <a href="#"><img src="cat.png" alt="cat"></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-6">
+                    <div>
+                        <h4>Отзыв кота Василия</h4>
+                        <p>Привет, я Василий! Я хочу рассказать всем о своем отличном опыте покупок в интернет-магазине для котов. Я купил там новый когтеточку и игрушку-мышку, и они просто замечательные! Мой хозяин был приятно удивлен качеством товаров и скоростью доставки. Теперь я чувствую, что у меня есть все необходимое для счастливой и комфортной кошачьей жизни. Я всем своим друзьям-котам настоятельно рекомендую обратиться в этот магазин! Спасибо за заботу о нас, кошачьих! С уважением, Василий.</p>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </section>
+  </main>
+    <footer>
+        <div class="conteiner" id="kontact">
+            <div class="row">
+                <div class="col-md-3 col-12 hhh">
+                    <h4>Время работы</h4>
+                    <ul class="list-unstyled">
+                        <li>Круглосуточно</li>
+                        <li>31 декабля - выходной</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-12 hhh">
+                    <h4>Контакты</h4>
+                    <ul class="list-unstyled">
+                        <li>Телефон :<a href="tel:89909909009"> 89909909009</a></li>
+                        <li>Почта : <a href="email:catshop@ru">catshop@ru</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 col-12 hhh">
+                    <h4>Мы в сети</h4>
+                        <div class="footer-icon">
+                            <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a><span>   catshop.facebook</span></li>
+                            <li><a href="#"><i class="fa-brands fa-vk"></i></a><span>   catshopVk.com</span></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a><span>   @catshop</span></li>
+                        </div>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Ваш Email</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Ваше сообшение</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <button class="btn btn-primary" type="submit">Отправить</button>
+                    </div>
+                  
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
